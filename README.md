@@ -1,3 +1,12 @@
 # trybe-exercicios
-# Testando push
-# Testando pull
+**Primeiro**
+
+## Testando push
+**Funcionou**
+
+Uhull!!
+
+## Testando pull
+**Funcionou**
+
+Aeeee!!!
