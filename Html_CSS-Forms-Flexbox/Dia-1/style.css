@@ -3,21 +3,25 @@ header {
   color: dimgrey;
 }
 section {
-  height: 300px;
+  height: 375px;
   width: 400px;
   border: 2px solid black;
-  gap: 5px;
 }
 .form-container {
+  margin-top: 10px;
   margin-left: 20px;
   color: dimgrey;
 }
 button {
   margin-top: 10px;
+  margin-right: 10px;
   padding: 5px;
   color: dimgrey;
 }
 #data {
   color: dimgrey;
   font-size: 14px;
+}
+#text-area {
+  resize: none;
 }
