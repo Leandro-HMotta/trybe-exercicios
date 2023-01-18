@@ -91,8 +91,73 @@ const changeInnerTextFridays = (sexta) => {
 
 const sextaArrays = ["4", "11", "18", "25"];
 
+const ExpandeDias = () => {
+  const day = document.getElementsByClassName("day");
+  for (let index = 0; index < day.length; index += 1) {
+    day[index].addEventListener("mouseover", () => {
+      day[index].style.fontSize = "28px";
+    });
+    day[index].addEventListener("mouseleave", () => {
+      day[index].style.fontSize = "20px";
+    });
+  }
+};
+
+const tarefas = (param) => {
+  const paiTarefas = document.querySelector(".my-tasks");
+  const criaSpan = document.createElement("span");
+  criaSpan.innerText = param;
+  paiTarefas.appendChild(criaSpan);
+};
+
+const legendColor = (cor) => {
+  const paiTarefas = document.querySelector(".my-tasks");
+  const criaDiv = document.createElement("div");
+  criaDiv.className = "task";
+  criaDiv.style.backgroundColor = cor;
+  paiTarefas.appendChild(criaDiv);
+};
+
+const taskSelected = () => {
+  const pegaTask = document.getElementsByClassName("task");
+  for (let index = 0; index < pegaTask.length; index += 1) {
+    pegaTask[index].addEventListener("click", (event) => {
+      const selected = document.querySelector(".selected"); // ate aqui nao tinha nenhum // Pega a class
+      if (selected) {
+        selected.classList.remove("selected");
+      } else {
+        event.target.classList.add("selected"); // quando eu clicar ele adiciona
+      }
+    });
+  }
+};
+
+const setDayColor = () => {
+  let selectedTask = document.getElementsByClassName("task selected");
+  let days = document.querySelector("#days");
+  let taskDiv = document.querySelector(".task");
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener("click", (event) => {
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor; // Pega a cor de fundo do primeiro elemento salvo na variável "selectedTask" e salva na variável "color"
+      event.target.style.color = color; // atribui a cor salva na variável "color" ao evento alvo
+    } else if (eventTargetColor === taskColor) {
+      event.target.style.color = "rgb(119,119,119)"; // Altera a cor de fundo do evento alvo para "rgb(119, 119, 119)"
+    }
+  });
+};
+
 window.onload = () => {
   criandoLi();
+  ExpandeDias();
+  tarefas("cozinhar");
+  legendColor("green");
+  legendColor("blue");
+  legendColor("grey");
+  taskSelected();
+  setDayColor();
   createBtn("Feriados", "btn-holiday", changeCollor);
   createBtn("Sexta-Feira", "btn-friday");
   changeInnerTextFridays(sextaArrays);
