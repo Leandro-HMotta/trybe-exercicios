@@ -50,11 +50,25 @@ console.log(allLessons)
 
 const studentNumber = (param) => {
   let values = 0;
-  for (let index = 0; index < 3; index += 1) {
-    const soma = Object.values(allLessons)[index].numeroEstudantes
-    values += soma
+  for (let index = 0; index < Object.keys(param).length; index += 1) {
+    values += Object.values(allLessons)[index].numeroEstudantes
   }
   return values
 }
 
 console.log(studentNumber(allLessons))
+
+const getObjectValueByNumber = (obj, value) => {
+  return Object.values(obj)[value]
+}
+console.log(getObjectValueByNumber(lesson1, 2))
+
+
+const verifyTrueFalse = (object, key, value) => {
+  return (object[key] === value)
+
+}
+
+console.log(verifyTrueFalse(lesson3, 'turno', 'noite'));
+
+console.log(verifyTrueFalse(lesson3, 'materia', 'Maria Clara'));
