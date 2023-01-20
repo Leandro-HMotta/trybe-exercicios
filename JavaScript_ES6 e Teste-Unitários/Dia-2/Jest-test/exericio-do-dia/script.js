@@ -56,4 +56,16 @@ const decode = (string) => {
   return mapString(map, string);
 };
 
-module.exports = { myRemove, myFizzBuzz, mapString, encode, decode };
+const techList = (array, nome) => {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  const arraySort = array.sort();
+  const arrayObject = [];
+  for (let index = 0; index < arraySort.length; index += 1) {
+    arrayObject.push({ tech: arraySort[index], name: nome });
+  }
+  return arrayObject;
+};
+
+module.exports = { myRemove, myFizzBuzz, mapString, encode, decode, techList };
