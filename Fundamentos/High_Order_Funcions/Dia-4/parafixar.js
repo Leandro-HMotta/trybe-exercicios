@@ -23,11 +23,9 @@ const jobInfos = {
 };
 
 const newobj = { ...user, ...jobInfos };
-
 const { name, age, nationality, profession, squad, squadInitials } = newobj;
 
 // const { name, age, nationality } = user;
-
 // const { profession, squad, squadInitials } = jobInfos;
 
 const text = `Hi, my name is ${name}, I'm ${age} years old and I'm ${nationality}. I work as a ${profession} and my squad is ${squadInitials}-${squad}`;
