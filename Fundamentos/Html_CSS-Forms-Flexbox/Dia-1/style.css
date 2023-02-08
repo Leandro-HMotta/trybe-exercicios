@@ -1,0 +1,27 @@
+header {
+  font-size: 40px;
+  color: dimgrey;
+}
+section {
+  height: 375px;
+  width: 400px;
+  border: 2px solid black;
+}
+.form-container {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: dimgrey;
+}
+button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  color: dimgrey;
+}
+#data {
+  color: dimgrey;
+  font-size: 14px;
+}
+#text-area {
+  resize: none;
+}

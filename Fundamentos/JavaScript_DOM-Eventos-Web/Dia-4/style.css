@@ -1,0 +1,36 @@
+#title {
+  text-align: center;
+}
+
+#subtitle {
+  text-align: center;
+}
+#navigation {
+  display: flex;
+  border: 1px solid green;
+}
+#cor-de-fundo {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#cor-do-texto {
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+}
+#tamanho-da-fonte {
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+}
+#espacamento {
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+}
+#tipo-da-fonte {
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+}

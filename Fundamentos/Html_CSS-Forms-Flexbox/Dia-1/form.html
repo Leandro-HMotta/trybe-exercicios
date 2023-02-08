@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TrybeTrip!</title>
+  </head>
+  <body>
+    <header>Header da página</header>
+    <section>
+      <form method="get">
+        <div class="form-container">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            maxlength="40"
+            minlength="10"
+          />
+        </div>
+
+        <div class="form-container">
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            maxlength="50"
+            minlength="10"
+          />
+        </div>
+        <div class="form-container">
+          <label for="opcao1">Cidade</label>
+          <input type="radio" name="opcao" id="opcao1" />
+
+          <label for="opcao2">Campo</label>
+          <input type="radio" name="opcao" id="opcao2" />
+
+          <label for="opcao3">Praia</label>
+          <input type="radio" name="opcao" id="opcao3" />
+
+          <label for="opcao4">Cachoeira</label>
+          <input type="radio" name="opcao" id="opcao4" />
+        </div>
+
+        <div class="form-container">
+          <label for="text-area">Porque você deveria ganhar a viagem:</label>
+          <textarea
+            name="text-area"
+            id="text-area"
+            cols="30"
+            rows="10"
+            placeholder="Digite aqui:"
+            maxlength="500"
+          ></textarea>
+        </div>
+
+        <div class="form-container">
+          <label for="data">Data</label>
+          <input type="date" name="data" id="data" />
+        </div>
+
+        <div class="form-container">
+          <label for="concordo1">Concordo 1</label>
+          <input type="checkbox" name="concordo1" id="concordo1" required />
+        </div>
+        <div class="form-container">
+          <label for="concordo2">Concordo 2</label>
+          <input type="checkbox" name="concordo2" id="concordo2" required />
+        </div>
+        <button type="submit" id="submit">Enviar</button>
+        <button type="reset">Apagar</button>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
