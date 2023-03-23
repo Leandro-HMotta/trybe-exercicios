@@ -37,7 +37,7 @@ class App extends React.Component {
     // console.log(nextState.person[0].dob.age);
     const AGE = 50;
     if (nextState.arrayFull[0].dob.age < AGE) return true;
-    this.componentDidMount()
+    this.fetchApi();
   }
 
   render() {
